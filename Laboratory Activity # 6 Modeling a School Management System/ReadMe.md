@@ -61,10 +61,13 @@ Polymorphism is demonstrated by storing all device objects in a `Device[]` array
 
 ## Author
 
-Charlie Fluxx
+Charles May T. Esquivel
+
+BSCS-2D
 
 ## Notes
 
 * This project is console-based and intended for learning purposes.
 * All classes are placed in one file to simplify submission and review.
 * The design can be easily extended by adding new device classes that inherit from `Device`.
+
