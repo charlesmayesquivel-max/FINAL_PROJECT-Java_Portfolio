@@ -62,6 +62,7 @@ This project is implemented entirely in a single file named `Lab1JavaReview.java
 ## Author
 
 Charles May T. Esquivel
+
 BSCS-2D
 
 ## Notes
@@ -69,4 +70,5 @@ BSCS-2D
 * The system uses **arrays instead of collections** to reinforce basic Java concepts.
 * The maximum number of books is fixed for simplicity.
 * This project is intended for educational and review purposes.
+
 
