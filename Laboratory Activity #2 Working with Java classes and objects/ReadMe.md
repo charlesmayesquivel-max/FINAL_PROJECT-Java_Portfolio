@@ -92,13 +92,14 @@ java CoffeeShop
 
 Follow the console output to observe reward accumulation and redemption.
 
-Author
+
+## Author
 
 Charles May T. Esquivel
 
 BSCS-2D
 
-Notes
+## Notes
 
 Reward redemption is based on a 100-point threshold per free drink.
 
