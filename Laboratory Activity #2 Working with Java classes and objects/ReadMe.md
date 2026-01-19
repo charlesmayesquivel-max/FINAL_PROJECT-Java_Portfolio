@@ -1,120 +1,105 @@
-Book List Management System (MyBookList.java)
-Description
+# Coffee Shop Rewards System
 
-This activity is a Java console-based application that demonstrates the use of Object-Oriented Programming (OOP) principles through a simple Book List Management System. The program models a Book entity with attributes such as title, author, year published, and current page, and performs operations such as displaying book details, simulating reading progress, and filtering books based on publication year.
+## Description
 
-The project is designed as an introductory Java OOP laboratory activity, focusing on encapsulation, constructors, immutability using final fields, arrays of objects, getters and setters, and basic conditional logic.
+This lab exercise implements a **Coffee Shop Rewards System** for BeanBrew Coffee Shop using **Java Object-Oriented Programming** principles. The program simulates how customers earn reward points from purchases, redeem free drinks upon reaching a required point threshold, and how the system tracks the total number of registered customers.
 
-Codebase Overview
+The activity emphasizes the correct use of **constructors**, the **`this` keyword**, **static variables and methods**, and applies these concepts in a practical, real-world business scenario.
 
-This project is implemented using two Java classes:
+## Learning Objectives
 
-MyBookList.java
+* Differentiate between **default** and **parameterized constructors**
+* Correctly use the **`this` keyword** for instance variables and methods
+* Implement and utilize **static variables** and **static methods**
+* Apply **object-oriented principles** in a realistic application context
 
-Book.java
+## Codebase Overview
 
-Classes
+The project is composed of two main classes:
 
-MyBookList (Main Class)
-Contains the main method and serves as the driver program. It creates multiple Book objects, stores them in an array, invokes instance methods, and applies conditional logic such as filtering books published after a specific year.
+### Customer Class
 
-Book (Supporting Class)
-Represents a book entity and encapsulates all book-related data and behaviors.
+Represents a coffee shop customer enrolled in the rewards program.
 
-Key Components
-Book Class
+**Instance Variables**
 
-Private Attributes
+* `String name` – stores the customer’s name
+* `int points` – stores accumulated reward points
 
-final String title – stores the book title (immutable)
+**Static Variable**
 
-String author – stores the author’s name
+* `static int totalCustomers` – tracks the total number of registered customers
 
-final int yearPublished – stores the publication year (immutable)
+**Constructors**
 
-int currentPage – tracks the current reading progress
+* Default constructor for new or unnamed customers
+* Parameterized constructor for initializing name
+* Parameterized constructor for initializing name and starting points
 
-Constructor
+**Instance Methods**
 
-Initializes book objects with required details
+* `addPoints(int points)` – adds reward points from purchases
+* `redeemReward()` – redeems a free drink for every 100 points
+* `displayCustomerInfo()` – displays the customer’s details
 
-Getter Methods
+**Static Methods**
 
-Provide controlled access to book information
+* `displayTotalCustomers()` – displays the total number of customers
+* `getAllowedRewardsRedemption(Customer customer)` – calculates how many free rewards a customer can redeem based on their points
 
-Setter Methods
+### CoffeeShop Class (Main Class)
 
-Allow modification of mutable fields such as author and current page
+Handles program execution and simulates customer transactions.
 
-Instance Methods
+Key responsibilities:
 
-displayDetails() – displays complete book information
+* Creates customer objects using both default and parameterized constructors
+* Simulates multiple transactions by calling `addPoints()` multiple times
+* Redeems rewards for all customers
+* Displays customer information and total customers using static methods
+* Registers new customers dynamically
 
-Reading-related methods that update the current page to simulate progress
+## Program Flow Summary
 
-Encapsulation is enforced by keeping all fields private and exposing access through methods only.
+* Three customers are initially created:
 
-MyBookList Class
+  * Joseph (200 points)
+  * Peter (new customer, gains points through multiple transactions)
+  * An unnamed customer
+* Reward redemption is attempted for all customers
+* Customer details and total customer count are displayed
+* A fourth customer, Diane, is added and earns points
+* The total number of customers is updated and displayed
 
-Instantiates multiple Book objects using constructors
+## How to Run the Project
 
-Stores book objects in an array
+1. Ensure **Java JDK 8 or later** is installed.
+2. Save the files as:
 
-Iterates through the array to:
+Customer.java
+CoffeeShop.java
 
-Display book details
+markdown
+Copy code
+3. Open a terminal or command prompt in the project directory.
+4. Compile the program:
 
-Simulate reading progress
+```bash
+javac Customer.java CoffeeShop.java
+Run the application:
 
-Filter and display books published after 2010
-
-Demonstrates object interaction and basic conditional logic
-
-How to Run the Project
-
-Ensure you have Java JDK 8 or later installed.
-
-Place both files in the same directory:
-
-Book.java
-MyBookList.java
-
-
-Open a terminal or command prompt in that directory.
-
-Compile the program:
-
-javac Book.java MyBookList.java
-
-
-Run the program:
-
-java MyBookList
-
-
-Observe the console output displaying:
-
-Book details
-
-Reading progress updates
-
-A list of books published after 2010
+bash
+Copy code
+java CoffeeShop
+Follow the console output to observe reward accumulation and redemption.
 
 Author
-
 Charles May T. Esquivel
 BSCS-2D
 
 Notes
+Reward redemption is based on a 100-point threshold per free drink.
 
-This is a console-based Java application intended for learning and practice.
+Static members ensure accurate tracking of customers across all instances.
 
-The project emphasizes clean class design and proper application of OOP fundamentals.
-
-The program can be easily extended by:
-
-Adding methods such as markAsFinished()
-
-Introducing book categories or genres
-
-Implementing user input instead of hardcoded objects
+The design can be extended to include purchase history, point expiration, or GUI support.
