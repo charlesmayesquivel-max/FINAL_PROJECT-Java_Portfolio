@@ -1,51 +1,74 @@
 Book List Management System (MyBookList.java)
 Description
 
-This activity demonstrates the use of Object-Oriented Programming (OOP) principles in Java through a simple Book List Management System. The program models a Book entity with attributes such as title, author, year published, and current page, and performs various operations such as displaying book details, simulating reading progress, and filtering books based on publication year.
+This activity is a Java console-based application that demonstrates the use of Object-Oriented Programming (OOP) principles through a simple Book List Management System. The program models a Book entity with attributes such as title, author, year published, and current page, and performs operations such as displaying book details, simulating reading progress, and filtering books based on publication year.
 
-The project focuses on encapsulation, constructors, immutability with final fields, arrays of objects, getters/setters, and basic conditional logic, making it suitable as an introductory Java OOP laboratory activity.
+The project is designed as an introductory Java OOP laboratory activity, focusing on encapsulation, constructors, immutability using final fields, arrays of objects, getters and setters, and basic conditional logic.
 
 Codebase Overview
 
-This README documents the following Java files:
+This project is implemented using two Java classes:
 
 MyBookList.java
-Contains the main method. This class serves as the driver program where multiple Book objects are created and tested. It demonstrates:
-
-Instantiating objects using constructors
-
-Calling instance methods
-
-Storing objects in an array
-
-Iterating through objects to apply conditions (e.g., filtering books published after 2010)
 
 Book.java
-Represents the Book class and encapsulates book-related data and behavior.
 
-Key features:
+Classes
 
-Private attributes:
+MyBookList (Main Class)
+Contains the main method and serves as the driver program. It creates multiple Book objects, stores them in an array, invokes instance methods, and applies conditional logic such as filtering books published after a specific year.
 
-title (final)
+Book (Supporting Class)
+Represents a book entity and encapsulates all book-related data and behaviors.
 
-author
+Key Components
+Book Class
 
-yearPublished (final)
+Private Attributes
 
-currentPage
+final String title – stores the book title (immutable)
 
-Constructor to initialize book objects
+String author – stores the author’s name
 
-Getter methods for accessing book details
+final int yearPublished – stores the publication year (immutable)
 
-Setter methods for modifying mutable fields
+int currentPage – tracks the current reading progress
 
-displayDetails() method to print book information
+Constructor
 
-Reading-related behavior that updates the current page
+Initializes book objects with required details
 
-Encapsulation is enforced by keeping fields private and exposing controlled access through methods.
+Getter Methods
+
+Provide controlled access to book information
+
+Setter Methods
+
+Allow modification of mutable fields such as author and current page
+
+Instance Methods
+
+displayDetails() – displays complete book information
+
+Reading-related methods that update the current page to simulate progress
+
+Encapsulation is enforced by keeping all fields private and exposing access through methods only.
+
+MyBookList Class
+
+Instantiates multiple Book objects using constructors
+
+Stores book objects in an array
+
+Iterates through the array to:
+
+Display book details
+
+Simulate reading progress
+
+Filter and display books published after 2010
+
+Demonstrates object interaction and basic conditional logic
 
 How to Run the Project
 
@@ -69,11 +92,11 @@ Run the program:
 java MyBookList
 
 
-Observe the console output showing:
+Observe the console output displaying:
 
 Book details
 
-Reading progress
+Reading progress updates
 
 A list of books published after 2010
 
@@ -86,7 +109,7 @@ Notes
 
 This is a console-based Java application intended for learning and practice.
 
-The project emphasizes clean class design and proper use of OOP fundamentals.
+The project emphasizes clean class design and proper application of OOP fundamentals.
 
 The program can be easily extended by:
 
