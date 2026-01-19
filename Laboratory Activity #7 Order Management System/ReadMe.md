@@ -66,7 +66,7 @@ com/store/order
 com/store/payment
 com/store/main
 
-'''bash
+bash
 Copy code
 3. Open a terminal or command prompt in the project root directory.
 4. Compile the project:
@@ -95,4 +95,5 @@ Enums are used to represent fixed system states safely.
 Collections are managed using ArrayList and traversed using Iterator.
 
 This activity is intended for educational and academic purposes.
+
 
