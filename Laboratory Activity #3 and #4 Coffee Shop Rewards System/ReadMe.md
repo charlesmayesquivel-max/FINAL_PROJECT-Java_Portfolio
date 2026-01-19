@@ -94,10 +94,13 @@ Key responsibilities:
 
 ## Author
 
-Charlie Fluxx
+Charles May T. Esquivel
+
+BSCS-2D
 
 ## Notes
 
 * Reward redemption is based on a **100-point threshold per free drink**.
 * Static members ensure accurate tracking of customers across all instances.
 * The design can be extended to include purchase history, point expiration, or GUI support.
+
