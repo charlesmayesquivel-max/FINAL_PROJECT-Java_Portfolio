@@ -1,75 +1,71 @@
-Modeling a School Management System (TeacherStudentAssignment.java)
-Description
+# Modeling a School Management System (TeacherStudentAssignment.java)
 
-This activity is a Java console-based application that models a simple School Management System using Object-Oriented Programming (OOP) principles. It demonstrates how real-world school entities such as students, teachers, and courses can be represented through classes and relationships.
+## Description
 
-The program focuses on applying inheritance (IS-A relationship) and aggregation (HAS-A relationship), along with constructors, method overriding, and the use of object arrays.
+This activity is a **Java console-based application** that models a simple **School Management System** using **Object-Oriented Programming (OOP) principles**. It demonstrates how real-world school entities such as persons, students, teachers, and courses can be represented using classes and object relationships.
 
-Codebase Overview
+The program is designed to reinforce **core OOP concepts**, including inheritance, aggregation, constructors, method reuse through the `super` keyword, and structured data representation using object arrays.
 
-This project is implemented in a single Java file named TeacherStudentAssignment.java.
+## Codebase Overview
 
-TeacherStudentAssignment (Main Class)
-Contains the main method where objects are created and program execution begins.
+This project is implemented entirely in a single file named `TeacherStudentAssignment.java`.
 
-Key Components
+* **TeacherStudentAssignment (Main Class)**  
+  Contains the `main` method and controls the overall execution of the program.
 
-Base Class
+### Key Components
 
-Person – represents a general person with common attributes such as name, age, and gender.
+* **Base Class**
 
-Derived Classes
+  * `Person` – represents a general person with common attributes such as name, age, and gender.
 
-Student – extends Person and adds a student ID.
+* **Derived Classes**
 
-Teacher – extends Person and represents a teacher assigned to multiple courses.
+  * `Student` – extends `Person` and adds a student ID.
+  * `Teacher` – extends `Person` and represents a teacher assigned to multiple courses.
 
-Aggregated Class
+* **Aggregated Class**
 
-Course – represents a course handled by a teacher (HAS-A relationship).
+  * `Course` – represents a course handled by a teacher, demonstrating a HAS-A relationship.
 
-Object Relationships
-The system demonstrates:
+* **Object Relationships**  
+  The application demonstrates the following relationships:
 
-Inheritance – Student and Teacher inherit from Person
+  * **Inheritance (IS-A)** – `Student` and `Teacher` inherit from `Person`
+  * **Aggregation (HAS-A)** – `Teacher` maintains an array of `Course` objects
 
-Aggregation – Teacher contains an array of Course objects
+* **Output Display**  
+  Each class contains display methods that output formatted information to the console.
 
-Output Display
-Each class includes display methods that output formatted information to the console.
+## How to Run the Project
 
-How to Run the Project
-
-Ensure you have Java JDK 8 or later installed.
-
-Save the file as:
+1. Ensure you have **Java JDK 8 or later** installed.
+2. Save the file as:
 
 TeacherStudentAssignment.java
 
+markdown
+Copy code
+3. Open a terminal or command prompt in the file directory.
+4. Compile the program:
 
-Open a terminal or command prompt in the file directory.
-
-Compile the program:
 
 javac TeacherStudentAssignment.java
-
-
 Run the program:
 
+
+Copy code
 java TeacherStudentAssignment
-
-
 View the displayed student, teacher, and course information in the console.
 
-Author
-
+## Author
 Charles May T. Esquivel
+
 BSCS-2D
 
-Notes
-
+## Notes
 This project is console-based and does not require user input.
 
-The activity emphasizes OOP concepts rather than data persistence.
+The system focuses on demonstrating object relationships rather than user interaction.
 
-Designed for academic and learning purposes to reinforce Java class relationships.
+This activity is intended for educational and learning purposes.
